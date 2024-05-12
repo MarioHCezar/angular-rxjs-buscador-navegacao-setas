@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Livro } from 'src/app/models/interface';
+import { Livro } from '../../models/interface';
 import { BuscaLivroService } from 'src/app/services/busca-livro.service';
 
 @Component({
