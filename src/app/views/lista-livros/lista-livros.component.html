@@ -1,0 +1,27 @@
+<section class="container">
+  <header>Que livro você procura?</header>
+  <app-search-field
+    (pesquisaRealizada)="realizarPesquisa($event)"
+  ></app-search-field>
+  <p>Busque por assunto, autoria, nome...</p>
+  <div *ngFor="let listaLivros of resultadosPesquisa">
+    <h2 *ngIf="listaLivros?.length > 0">Resultado</h2>
+    <app-resultado-pesquisa
+      [listaLivros]="listaLivros"
+    ></app-resultado-pesquisa>
+  </div>
+  <ng-template #telaInicial>
+    <div class="imagens">
+      <h1 class="titulo">
+        Busque o livro <br />
+        que quiser na <br />
+        nossa estante!
+      </h1>
+      <img
+        class="ilustracao"
+        src="../../assets/imagens/ilustracao-estante.png"
+        alt="Ilustração de uma pessoa em pé ao lado de uma estante com livros e plantas"
+      />
+    </div>
+  </ng-template>
+</section>
